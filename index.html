@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoreboard</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="home">
+            <h3 id="title">HOME</h3>
+            <div class="score" id="scoreHome">0</div>
+            <div class="addScore">
+                <button id="btn-one" onclick="HomeOne()">+1</button>
+                <button id="btn-two" onclick="HomeTwo()">+2</button>
+                <button id="btn-three" onclick="HomeThree()">+3</button>
+            </div>
+        </div>
+        <div class="new">
+            <h3 id="game-el"></h3>
+            <button id="new-game" onclick="NewGame()">New Game</button>
+        </div>
+        <div class="away">
+            <h3 id="title">AWAY</h3>
+            <div class="score" id="scoreAway">0</div>
+            <div class="addScore">
+                <button id="btn-one" onclick="AwayOne()">+1</button>
+                <button id="btn-two" onclick="AwayTwo()">+2</button>
+                <button id="btn-three" onclick="AwayThree()">+3</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
