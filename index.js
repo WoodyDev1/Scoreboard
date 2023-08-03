@@ -17,6 +17,41 @@ function textColor() {
 } 
 */
 
+function HomeOne(){
+    homeCount += 1
+    homeEL.textContent = homeCount
+    scoreLimit()
+}
+
+function HomeTwo(){
+    homeCount += 2
+    homeEL.textContent = homeCount
+    scoreLimit()
+}
+
+function HomeThree(){
+    homeCount += 3
+    homeEL.textContent = homeCount
+    scoreLimit()
+}
+function AwayOne(){
+    awayCount += 1
+    awayEL.textContent = awayCount
+    scoreLimit()
+}
+
+function AwayTwo(){
+    awayCount += 2
+    awayEL.textContent = awayCount
+    scoreLimit()
+}
+
+function AwayThree(){
+    awayCount += 3
+    awayEL.textContent = awayCount
+    scoreLimit()
+}
+
 gameEL.textContent = "Game 1"
 function NewGame() {
     gameCount = gameCount + 1
@@ -31,31 +66,14 @@ function NewGame() {
     }
 }
 
-function HomeOne(){
-    homeCount += 1
-    homeEL.textContent = homeCount
-}
+function scoreLimit() {
+    if (homeCount == 100) {
+        homeCount = 0
+        NewGame()
+    }
 
-function HomeTwo(){
-    homeCount += 2
-    homeEL.textContent = homeCount
-}
-
-function HomeThree(){
-    homeCount += 3
-    homeEL.textContent = homeCount
-}
-function AwayOne(){
-    awayCount += 1
-    awayEL.textContent = awayCount
-}
-
-function AwayTwo(){
-    awayCount += 2
-    awayEL.textContent = awayCount
-}
-
-function AwayThree(){
-    awayCount += 3
-    awayEL.textContent = awayCount
+    if (awayCount == 100) {
+        awayCount = 0
+        NewGame()
+    }
 }
